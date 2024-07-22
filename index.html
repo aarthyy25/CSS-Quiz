@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="question">
+        <h3>In web design, what does CSS stands for?</h3>
+        <div class="row">
+            <button class="wrg" onclick="wrong1()">A</button>
+            <p class="wrg">Counter Style Sheet</p>
+        </div>
+        <div class="row">
+            <button class="wrg" onclick="wrong1()">B</button>
+            <p class="wrg">Corrective Style Sheet</p>
+        </div>
+        <div class="row">
+            <button class="wrg" onclick="wrong1()">C</button>
+            <p class="wrg">Computer Style Sheet</p>
+        </div>
+        <div class="row1">
+            <button onclick="correct()">D</button>
+            <p class="crt">Cascading Style Sheet</p>
+        </div>
+    </div>
+    <script>
+         var wrong = document.querySelectorAll(".row");
+            for (var i = 0; i < wrong.length; i++) {
+                wrong[i].addEventListener('click', function() {
+                    this.style.backgroundColor = "red";
+                   
+                    this.querySelector('button').style.backgroundColor = "red";
+                    this.querySelector('p').style.backgroundColor= "red";
+                });
+            }
+
+            var correct = document.querySelector(".row1");
+            correct.addEventListener('click', function() {
+                this.style.backgroundColor = "green";
+                this.querySelector('button').style.backgroundColor = "green";
+                this.querySelector('p').style.backgroundColor = "green";
+
+            });
+    </script>
+</body>
+</html>
